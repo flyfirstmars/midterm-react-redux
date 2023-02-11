@@ -1,0 +1,74 @@
+.App {
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    padding: 12px 0;
+    background-color: lightgray;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.header *:not(:last-child) {
+    margin-right: 12px;
+}
+
+
+.product-list {
+    width: 80%;
+    margin: auto;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid gray;
+}
+
+.product-item:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.product-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.product-item img {
+    width: 200px;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 3px solid #263038;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #FF3D00;
+    width: 16px;
+    height: 16px;
+    transform: translate(-50%, 50%);
+    border-radius: 50%;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 
